@@ -210,7 +210,7 @@ export default function Home() {
                 </h1>
                 <p className="text-gray-300 text-xl font-mono">
                     <text>Maybe there’s nothing</text>
-                    <span className="inline-block w-[6ch] text-left font-mono">
+                    <span className="inline-block w-[6ch] text-left font-mono [font-variant-ligatures:none]">
     {".".repeat(dots)}
   </span>
                 </p>
