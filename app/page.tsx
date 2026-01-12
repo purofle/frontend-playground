@@ -1,20 +1,11 @@
 "use client";
 
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useRef} from "react";
 
 const MAX_CLICKS = 10;
 
 export default function Home() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
-    const [dots, setDots] = useState(1)
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setDots((prev) => (prev >= 6 ? 1 : prev + 1))
-        }, 500)
-
-        return () => clearInterval(timer)
-    }, [])
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -203,17 +194,42 @@ export default function Home() {
             <canvas ref={canvasRef} className="absolute inset-0 h-full w-full"/>
 
             <main
-                className="pointer-events-none relative flex min-h-screen w-full flex-col items-center gap-8 py-32 px-16 text-center">
+                className="pointer-events-none relative mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-8 text-center">
                 <h1 className="text-green-300 text-4xl font-['Cubic11']">
                     akana.moe 前端试验田
-                    <span className="cursor pl-2 font-mono">:)</span>
+                    <span className="cursor px-2">:)</span>
                 </h1>
-                <p className="text-gray-300 text-xl font-mono">
-                    <text>Maybe there’s nothing</text>
-                    <span className="inline-block w-[6ch] text-left font-mono [font-variant-ligatures:none]">
-    {".".repeat(dots)}
-  </span>
+                {/*translate-x 为了维持视觉中心*/}
+                <p className="text-gray-300 text-xl font-mono translate-x-[-2vh]">
+                    <text>Maybe there's nothing...</text>
                 </p>
+
+                {/*translate-x 为了维持视觉中心*/}
+                <div className="flex flex-row gap-4 font-mono text-xl text-gray-400 translate-x-[-3vh]">
+                    <a
+                        href="https://blog.archlinux.tech"
+                        className="pointer-events-auto font-mono text-gray-400
+                        bg-[linear-gradient(currentColor,currentColor)]
+                        bg-size-[0%_1px] bg-position-[0_100%]
+                        bg-no-repeat
+                        transition-[background-size,color] duration-300
+                        hover:text-green-300 hover:bg-size-[100%_1px]"
+                    >
+                        [ Blog ]
+                    </a>
+                    <span className="text-gray-600">|</span>
+                    <a
+                        href="https://github.com/purofle/frontend-playground"
+                        className="pointer-events-auto font-mono text-gray-400
+                        bg-[linear-gradient(currentColor,currentColor)]
+                        bg-size-[0%_1px] bg-position-[0_100%]
+                        bg-no-repeat
+                        transition-[background-size,color] duration-300
+                        hover:text-green-300 hover:bg-size-[100%_1px]"
+                    >
+                        [ GitHub ]
+                    </a>
+                </div>
             </main>
         </div>
     )
