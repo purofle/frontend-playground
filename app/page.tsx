@@ -194,18 +194,18 @@ export default function Home() {
             <canvas ref={canvasRef} className="absolute inset-0 h-full w-full"/>
 
             <main
-                className="pointer-events-none relative mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-8 text-center">
-                <h1 className="text-green-300 text-4xl font-['Cubic11']">
+                className="pointer-events-none relative mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-6 px-6 text-center sm:gap-8 sm:px-8">
+                <h1 className="text-green-300 text-2xl font-['Cubic11'] leading-tight sm:text-4xl">
                     akana.moe 前端试验田
                     <span className="cursor px-2">:)</span>
                 </h1>
                 {/*translate-x 为了维持视觉中心*/}
-                <p className="text-gray-300 text-xl font-mono translate-x-[-2vh]">
+                <p className="text-gray-300 text-base font-mono translate-x-0 sm:translate-x-[-2vh] sm:text-xl">
                     <text>Maybe there's nothing...</text>
                 </p>
 
                 {/*translate-x 为了维持视觉中心*/}
-                <div className="flex flex-row gap-4 font-mono text-xl text-gray-400 translate-x-[-3vh]">
+                <div className="flex flex-col items-center gap-3 font-mono text-base text-gray-400 translate-x-0 sm:flex-row sm:gap-4 sm:translate-x-[-3vh] sm:text-xl">
                     <a
                         href="https://blog.archlinux.tech"
                         className="pointer-events-auto font-mono text-gray-400
@@ -217,7 +217,7 @@ export default function Home() {
                     >
                         [ Blog ]
                     </a>
-                    <span className="text-gray-600">|</span>
+                    <span className="hidden text-gray-600 sm:inline">|</span>
                     <a
                         href="https://github.com/purofle/frontend-playground"
                         className="pointer-events-auto font-mono text-gray-400
