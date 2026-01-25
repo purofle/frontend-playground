@@ -207,7 +207,7 @@ export default function Home() {
                 {/*translate-x 为了维持视觉中心*/}
                 <div className="flex flex-col items-center gap-3 font-mono text-base text-gray-400 translate-x-0 sm:flex-row sm:gap-4 sm:translate-x-[-3vh] sm:text-xl">
                     <a
-                        href="https://blog.archlinux.tech"
+                        href="https://blog.akana.moe"
                         className="pointer-events-auto font-mono text-gray-400
                         bg-[linear-gradient(currentColor,currentColor)]
                         bg-size-[0%_1px] bg-position-[0_100%]
